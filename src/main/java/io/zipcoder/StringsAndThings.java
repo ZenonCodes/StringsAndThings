@@ -134,6 +134,11 @@ public class StringsAndThings {
         String[] stringArray = input.split("");
         // set counter for number of triples
         Integer tripleCount = 0;
+        // if length is less than 3 then there can't be a triple so return 0;
+        if (stringArray.length < 3){
+            return tripleCount;
+        }
+
 
         for (int i = 0; i < stringArray.length - 2; i++){
             String currentChar = stringArray[i];
