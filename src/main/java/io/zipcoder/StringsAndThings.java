@@ -130,6 +130,17 @@ public class StringsAndThings {
      *            countTriple("a") // Should return 0
      */
     public Integer countTriple(String input){
-        return null;
+        // make string an array so I can iterate through it
+        String[] stringArray = input.split("");
+        // set counter for number of triples
+        Integer tripleCount = 0;
+
+        for (int i = 0; i < stringArray.length - 2; i++){
+            String currentChar = stringArray[i];
+            if (stringArray[i + 1].equals(currentChar) && stringArray[i+2].equals(currentChar)){
+                tripleCount++;
+            }
+        }
+        return tripleCount;
     }
 }
