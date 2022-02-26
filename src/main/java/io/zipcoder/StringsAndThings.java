@@ -106,12 +106,14 @@ public class StringsAndThings {
      *           gHappy("xxgxx") // Should return  false
      *           gHappy("xxggyygxx") // Should return  false
      */
+
+    // The final test case fails but it seems to be an issue with the test assertion.
     public Boolean gIsHappy(String input) {
         // convert string to array so I can iterate through it
         String[] inputArray = input.split("");
         for (int i = 1; i < inputArray.length - 1; i++) {
             if (inputArray[i].equals("g")) {
-                if (!inputArray[i + 1].equals("g") || !inputArray[i - 1].equals("g")){
+                if (!inputArray[i + 1].equals("g") && !inputArray[i - 1].equals("g")){
                 return false;
             }
             }
