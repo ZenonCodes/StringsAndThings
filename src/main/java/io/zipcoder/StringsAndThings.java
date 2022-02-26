@@ -86,15 +86,15 @@ public class StringsAndThings {
         int notCount = 0;
         // go through our string and count the occurances of substring is
         while (input.contains("is")){
-            input = input.replace("is", "");
+            input = input.replaceFirst("is", "");
             isCount++;
         }
         while (input.contains("not")){
-            input = input.replace("not", "");
+            input = input.replaceFirst("not", "");
             notCount++;
         }
         if (notCount == isCount){
-            return true
+            return true;
         }
         return false;
     }
