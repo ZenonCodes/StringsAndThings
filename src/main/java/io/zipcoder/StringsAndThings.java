@@ -81,7 +81,22 @@ public class StringsAndThings {
      *           containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
     public Boolean containsEqualNumberOfIsAndNot(String input){
-        return null;
+        // Count the occurances of substrings is and not
+        int isCount = 0;
+        int notCount = 0;
+        // go through our string and count the occurances of substring is
+        while (input.contains("is")){
+            input = input.replace("is", "");
+            isCount++;
+        }
+        while (input.contains("not")){
+            input = input.replace("not", "");
+            notCount++;
+        }
+        if (notCount == isCount){
+            return true
+        }
+        return false;
     }
 
     /**
